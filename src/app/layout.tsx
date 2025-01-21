@@ -3,6 +3,8 @@ import type {Metadata} from "next";
 import React from "react";
 import {Noto_Sans_TC} from "next/font/google";
 import "@/styles/globals.css";
+import ToasterFormat from "@/components/toastFormat";
+
 const notoSansTC = Noto_Sans_TC({
     variable: "--font-noto-sans-tc", // 繁體中文
     subsets: ["latin"], // 确保字体子集完整
@@ -20,6 +22,7 @@ export default function RootLayout({children}: {
     return (
         <html lang="zh-TW" className={`${notoSansTC.variable}`}>
         <body>
+        <ToasterFormat/>
         {children}
         </body>
         </html>

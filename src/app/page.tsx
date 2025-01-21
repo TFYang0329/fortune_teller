@@ -35,7 +35,7 @@ export default function Fortune() {
                     <li>準備三個相同的硬幣</li>
                     <li>在下面的問題格中填入要問的問題，需以正面的方式提問</li>
                     <ul>
-                        <li>不要出現"能不能"這一類的敘述</li>
+                        <li>不要出現&#34;能不能&#34;這一類的敘述</li>
                         <li>可以的問法: 3個月內會升官嗎?</li>
                         <li id="dont_do_that">不可以的問法: 3個月內會不會升官?</li>
                         <li id="can_do_that">可以的問法: 3個月內會升官嗎?</li>

@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import {toast} from "react-hot-toast";
 
 export default function LoginPage() {
     const [formType, setFormType] = useState<"login" | "signup" | null>(null);
@@ -29,10 +29,10 @@ export default function LoginPage() {
 
         const data = await res.json();
         if (res.ok) {
-            alert(data.message);
-            console.log("Token:", data.token);
+            toast.success(data.message || "Operation successful!");
         } else {
-            alert(data.message);
+            console.log(data)
+            toast.error(data.message || "An error occurred.");
         }
         console.log(data)
     }
@@ -58,14 +58,15 @@ export default function LoginPage() {
         const data = await res.json();
         if (res.ok) {
             toast.success(data.message);
+            handleToggle("login")
         } else {
             toast.error(data.message);
         }
+        console.log(data)
     }
 
     return (
         <div className="max-w-5xl mx-auto text-center">
-            <Toaster />
             <div className="mb-4">
                 <h1 className="text-4xl font-bold mb-6 text-amber-900">玄門易經卜卦</h1>
                 <p className="text-xl leading-8 text-gray-800">
