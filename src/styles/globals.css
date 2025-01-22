@@ -3,111 +3,34 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+.layout {
+    @apply w-full h-screen flex flex-col overflow-hidden;
 }
 
-body {
-    @apply bg-mystical-background text-mystical-text font-mystical;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.layout-sidebar {
+    @apply w-0;
+}
+.layout-page {
+    @apply flex flex-1 w-full h-full;
+    @apply bg-mystical-background text-mystical-text;
 }
 
-button {
-    background-color: #333;  /* 深色背景 */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.layout-child {
+    @apply flex-1 p-6 overflow-auto;
 }
 
-button:hover {
-    background-color: #555;
-    transform: scale(1.1); /* 放大效果 */
+.hover-scale-125 {
+    @apply transition duration-500 transform hover:scale-125;
 }
 
-
-form div {
-    margin: 10px 0;
+.hover-scale-200 {
+    @apply transition duration-500 transform hover:scale-200;
 }
 
-input {
-    padding: 8px;
-    font-size: 16px;
+.hover-scale-300 {
+    @apply transition duration-500 transform hover:scale-300;
 }
 
-#header_icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+.hover-scale-500 {
+    @apply transition duration-500 transform hover:scale-500;
 }
-
-#logout {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#dashboard_icon {
-    position: absolute;
-    top: 0;
-    right: 50px;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#fortune_header {
-    text-align: center;
-}
-
-#eleven {
-    font-weight: bolder;
-    color: red;
-}
-
-#dont_do_that {
-    font-weight: bolder;
-    color: red;
-}
-
-#can_do_that {
-    font-weight: bolder;
-    color: green;
-}
-
-#doc {
-    font-size: larger;
-    font-weight: 500;
-}
-
-#question_form {
-    background-color: #f5f5f5; /* 淡灰色背景 */
-    border: 1px solid #333;   /* 深色邊框 */
-    padding: 20px;
-    margin: 20px auto;
-    width:60%;
-    border-radius: 5px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-#question {
-    width: 15cm;
-}
-

@@ -9,14 +9,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      scale: {
+        200: '2',
+        300: '3',
+        500: '5',
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(-20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        spinSlow: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 2s forwards',
+        spinSlow: 'spinSlow 4s linear infinite',
       },
       theme: {
         fontSize: {
