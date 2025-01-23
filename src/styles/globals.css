@@ -10,6 +10,7 @@
 .layout-sidebar {
     @apply w-0;
 }
+
 .layout-page {
     @apply flex flex-1 w-full h-full;
     @apply bg-mystical-background text-mystical-text;
