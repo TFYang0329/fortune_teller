@@ -16,9 +16,9 @@ export default function TopBar() {
                     width={60}
                     height={60}
                     style={{ width: "auto", height: "auto" }}
-                    className="animate-spinSlow"
+                    // className="animate-spinSlow"
                 />
-                <h1 className="text-3xl font-bold">玄門</h1>
+                <h1 className="text-3xl font-bold">玄門卜卦</h1>
             </Link>
 
             {/* Menu */}
