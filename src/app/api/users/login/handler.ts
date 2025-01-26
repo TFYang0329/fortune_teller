@@ -46,5 +46,17 @@ export const loginHandler = async (req: Request): Promise<Response> => {
         maxAge: 24 * 60 * 60, // 有效期为 24 小时，单位为秒
     });
 
+    response.cookies.set("username", user.username, {
+        httpOnly: false,
+        sameSite: "strict",
+        maxAge: 24 * 60 * 60, // 24 小时
+    });
+
+    response.cookies.set("email", user.email, {
+        httpOnly: false,
+        sameSite: "strict",
+        maxAge: 24 * 60 * 60, // 24 小时
+    });
+
     return response;
 };

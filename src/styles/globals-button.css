@@ -106,13 +106,13 @@
     @apply button-base bg-transparent hover:bg-gray-300 text-gray-700 border-gray-700;
 }
 .button-gray-light {
-    @apply button-base bg-gray-100 hover:bg-gray-200 text-gray-500 border-gray-500;
+    @apply button-base bg-gray-300 hover:bg-gray-400 text-gray-700 border-gray-700;
 }
 .button-gray {
-    @apply button-base bg-gray-200 hover:bg-gray-300 text-gray-600 border-gray-600;
+    @apply button-base bg-gray-400 hover:bg-gray-500 text-gray-800 border-gray-800;
 }
 .button-gray-deep {
-    @apply button-base bg-gray-300 hover:bg-gray-400 text-gray-700 border-gray-700;
+    @apply button-base bg-gray-500 hover:bg-gray-600 text-gray-900 border-gray-900;
 }
 
 /* 青色按钮 */

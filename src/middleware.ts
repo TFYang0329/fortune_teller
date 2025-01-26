@@ -48,5 +48,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/((?!_next/static|favicon.ico).*)"], // 匹配所有路径，排除静态资源
+    matcher: ["/((?!_next/static|_next/image|favicon.ico|icon.png).*)"],
 };

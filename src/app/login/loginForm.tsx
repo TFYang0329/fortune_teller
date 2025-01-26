@@ -3,6 +3,7 @@
 
 import React, {useEffect, useState} from "react";
 import {toast} from "react-hot-toast";
+import {router} from "next/client";
 
 export default function LoginForm() {
     const [loginEmail, setLoginEmail] = useState("");
@@ -33,6 +34,7 @@ export default function LoginForm() {
 
             const data = await res.json();
             toast.success(data.message);
+            await router.push("/home");
         } catch (error) {
             console.error("API error:", error);
             toast.error("Network error. Please try again later.");
